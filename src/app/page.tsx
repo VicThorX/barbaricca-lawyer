@@ -1,5 +1,5 @@
 import PhysicalCard from "@/components/PhysicalCard";
-import { MapPin, Phone, MessageSquare } from "lucide-react";
+import { Phone, MessageSquare, Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import DecorativeFrame from "@/components/DecorativeFrame";
 import PracticeAreaCard from "@/components/PracticeAreaCard";
@@ -284,92 +284,68 @@ export default function Home() {
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16">
             
-            {/* Left side: Information and Map */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs uppercase tracking-widest text-gold-600 font-bold">
-                      Contacto y Ubicación
-                    </span>
-                    <div className="h-[1px] w-12 bg-gold-500/50"></div>
-                  </div>
-
-                  <h2 className="font-serif text-2xl sm:text-3xl font-bold tracking-wide text-slate-900 mb-4">
-                    Comience su Consulta Hoy Mismo
-                  </h2>
-
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    Puede enviarnos un mensaje con los detalles de su consulta utilizando el formulario, o bien comunicarse directamente mediante llamada o WhatsApp para coordinar una entrevista en nuestro despacho.
-                  </p>
+            {/* Left side: Information and Contact details */}
+            <div className="lg:col-span-5 flex flex-col space-y-6">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs uppercase tracking-widest text-gold-600 font-bold">
+                    Contacto y Asesoramiento
+                  </span>
+                  <div className="h-[1px] w-12 bg-gold-500/50"></div>
                 </div>
 
-                {/* Contact items */}
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white border border-slate-200 shadow-sm rounded-sm text-gold-600">
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="text-xs uppercase tracking-wider text-slate-500 font-bold">Dirección</h4>
-                      <p className="text-sm text-slate-800 font-semibold mt-0.5">
-                        9 de Julio 4008, B7600 Mar del Plata
-                      </p>
-                      <span className="text-[11px] text-slate-400">Provincia de Buenos Aires, Argentina</span>
-                    </div>
-                  </div>
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold tracking-wide text-slate-900 mb-4">
+                  Comience su Consulta Hoy Mismo
+                </h2>
 
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white border border-slate-200 shadow-sm rounded-sm text-gold-600">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="text-xs uppercase tracking-wider text-slate-500 font-bold">Teléfono</h4>
-                      <a href="tel:02234264333" className="text-sm text-slate-800 font-semibold hover:text-gold-600 transition-colors mt-0.5 block">
-                        0223 426-4333
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-white border border-slate-200 shadow-sm rounded-sm text-gold-600">
-                      <MessageSquare className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="text-xs uppercase tracking-wider text-slate-500 font-bold">WhatsApp de Guardia</h4>
-                      <a
-                        href="https://wa.me/5492234264333?text=Hola,%20necesito%20realizar%20una%20consulta%20jurídica."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-gold-600 font-semibold hover:underline mt-0.5 block"
-                      >
-                        +54 9 223 426-4333
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                  Puede enviarnos un mensaje con los detalles de su consulta utilizando el formulario, o bien comunicarse directamente por llamada o WhatsApp para coordinar una reunión presencial u online.
+                </p>
               </div>
 
-              {/* Polished custom map placeholder linking to Google Maps */}
-              <div className="relative w-full h-[220px] rounded-md overflow-hidden border border-slate-200 bg-white shadow-sm group">
-                <div className="absolute inset-0 bg-gold-500/5 z-10 pointer-events-none"></div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-white/90 z-20 hover:bg-white/80 transition-all duration-300">
-                  <MapPin className="w-8 h-8 text-gold-600 mb-3 animate-bounce" />
-                  <h4 className="font-serif text-slate-800 font-bold text-sm">Ver Ubicación en Google Maps</h4>
-                  <p className="text-xs text-slate-500 max-w-[240px] mt-1 mb-4">
-                    9 de Julio 4008, Mar del Plata
-                  </p>
-                  <a
-                    href="https://maps.google.com/?q=9+de+Julio+4008,+B7600+Mar+del+Plata"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 border border-gold-500 text-gold-600 hover:bg-gold-500 hover:text-slate-950 font-bold rounded-sm text-xs uppercase tracking-wider transition-colors"
-                  >
-                    Cómo Llegar
-                  </a>
+              {/* Contact items */}
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-white border border-slate-200 shadow-sm rounded-sm text-gold-600">
+                    <MessageSquare className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs uppercase tracking-wider text-slate-500 font-bold">WhatsApp de Guardia</h4>
+                    <a
+                      href="https://wa.me/5492234264333?text=Hola,%20necesito%20realizar%20una%20consulta%20jurídica."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-gold-600 font-semibold hover:underline mt-0.5 block"
+                    >
+                      +54 9 223 426-4333
+                    </a>
+                  </div>
                 </div>
-                {/* Visual grid pattern for maps aesthetics */}
-                <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#b89753_1.5px,transparent_1.5px)] [background-size:16px_16px]"></div>
+
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-white border border-slate-200 shadow-sm rounded-sm text-gold-600">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs uppercase tracking-wider text-slate-500 font-bold">Teléfono</h4>
+                    <a href="tel:02234264333" className="text-sm text-slate-800 font-semibold hover:text-gold-600 transition-colors mt-0.5 block">
+                      0223 426-4333
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-white border border-slate-200 shadow-sm rounded-sm text-gold-600">
+                    <Calendar className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-xs uppercase tracking-wider text-slate-500 font-bold">Atención Personalizada</h4>
+                    <p className="text-sm text-slate-800 font-semibold mt-0.5">
+                      Consultas Virtuales y Presenciales
+                    </p>
+                    <span className="text-[11px] text-slate-500">Coordinación de entrevistas presenciales en Mar del Plata u online (Zoom/Meet)</span>
+                  </div>
+                </div>
               </div>
 
             </div>
