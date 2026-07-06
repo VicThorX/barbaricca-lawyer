@@ -87,8 +87,8 @@ export default function Home() {
     <div className="min-h-screen bg-[#fdfdfa] text-slate-900 flex flex-col relative" id="inicio">
       
       {/* Background radial glow */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-gold-400/5 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-[50%] h-[20%] bg-gold-400/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-[50%] h-[20%] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       <Navbar />
 
