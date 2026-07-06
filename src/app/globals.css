@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdfdfa; /* Warm alabaster/linen background */
+  --foreground: #0f172a; /* Slate-900 / dark charcoal text */
+  
+  --gold-50: #fbf8f3;
+  --gold-100: #f4edd9;
+  --gold-200: #e8d9b4;
+  --gold-300: #d8c084;
+  --gold-400: #c5a85b;
+  --gold-500: #b5923b;
+  --gold-600: #97762d;
+  --gold-700: #7a5d24;
+  --gold-800: #624b20;
+  --gold-900: #513e1d;
+  --gold-950: #2e220e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  
+  --color-gold-50: var(--gold-50);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-700: var(--gold-700);
+  --color-gold-800: var(--gold-800);
+  --color-gold-900: var(--gold-900);
+  --color-gold-950: var(--gold-950);
+  
+  --animate-gold-shimmer: gold-shimmer 2.5s ease-in-out infinite;
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Gold Text & Gradients optimized for light backgrounds */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #8c6e35 0%, #b89753 50%, #513e1d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #7a5d24 0%, #b89753 50%, #97762d 100%);
+}
+
+.bg-gold-gradient-hover {
+  background: linear-gradient(135deg, #b89753 0%, #97762d 50%, #624b20 100%);
+}
+
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #7a5d24, #b89753, #97762d, #b89753, #7a5d24) 1;
+}
+
+/* Glow effects tailored for light themes */
+.gold-glow {
+  box-shadow: 0 4px 30px rgba(184, 151, 83, 0.08);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 10px 40px rgba(184, 151, 83, 0.16);
+  transition: all 0.3s ease-in-out;
 }
