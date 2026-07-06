@@ -22,6 +22,20 @@ export default function Home() {
       highlighted: true,
     },
     {
+      title: "Derecho Informático & Tecnología",
+      description: "Protección legal y técnica especializada para software, activos digitales, privacidad de datos y propiedad intelectual.",
+      items: [
+        "Registro de marcas, patentes y modelos de utilidad ante el INPI",
+        "Protección de software, código fuente y algoritmos",
+        "Derechos de autor, copyright y licencias de uso tecnológico",
+        "Redacción de contratos de software (SaaS, términos y condiciones)",
+        "Acuerdos de confidencialidad (NDA) y protección de datos",
+        "Defensa técnica ante fraudes y delitos informáticos"
+      ],
+      iconName: "Code" as const,
+      highlighted: true,
+    },
+    {
       title: "Sucesiones",
       description: "Tramitación y planificación sucesoria integral para resguardar y organizar el patrimonio familiar ante fallecimientos.",
       items: [
@@ -47,26 +61,15 @@ export default function Home() {
       highlighted: false,
     },
     {
-      title: "Reclamos Civiles y Amparos",
-      description: "Defensa activa de sus derechos patrimoniales y civiles ante daños, perjuicios o incumplimientos contractuales.",
+      title: "Litigios, Reclamos y Amparos",
+      description: "Defensa activa de sus derechos y patrimonio ante daños, perjuicios o vulneraciones civiles y constitucionales.",
       items: [
-        "Demandas por daños y perjuicios (accidentes, incumplimientos)",
-        "Amparos de salud y constitucionales",
-        "Negociación y acuerdos extrajudiciales",
-        "Redacción de cartas documento y notificaciones"
+        "Demandas por daños y perjuicios (accidentes, contratos)",
+        "Amparos de salud, previsionales y constitucionales",
+        "Redacción de denuncias penales preliminares y cartas documento",
+        "Negociación de acuerdos extrajudiciales"
       ],
       iconName: "Shield" as const,
-      highlighted: false,
-    },
-    {
-      title: "Derecho Penal",
-      description: "Asistencia técnica preliminar para la radicación formal de denuncias ante la comisión de hechos delictivos.",
-      items: [
-        "Redacción de denuncias penales (sin firma de letrado)",
-        "Asesoramiento inicial sobre derechos del damnificado",
-        "Estudio y análisis de encuadre penal"
-      ],
-      iconName: "ShieldAlert" as const,
       highlighted: false,
     },
     {
@@ -96,8 +99,8 @@ export default function Home() {
       <header className="relative pt-28 pb-16 md:pt-40 md:pb-28 px-4 sm:px-6 md:px-12 flex flex-col items-center text-center max-w-7xl mx-auto w-full z-10">
         <DecorativeFrame showEmblem={true} className="max-w-4xl w-full">
           <div className="flex flex-col items-center py-4 md:py-6">
-            <span className="text-xs uppercase tracking-[0.35em] text-gold-600 font-bold mb-3">
-              Estudio Jurídico de Prestigio
+            <span className="text-xs uppercase tracking-[0.2em] text-gold-600 font-bold mb-3">
+              Estudio Jurídico & Ingeniería en Software
             </span>
             
             <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-wider text-slate-900 leading-tight mb-4">
@@ -110,7 +113,7 @@ export default function Home() {
             <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent my-5"></div>
 
             <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl leading-relaxed mb-8 font-light">
-              Asesoramiento legal integral con más de 20 años de trayectoria, experiencia judicial y defensa de sus intereses en la ciudad de Mar del Plata. Compromiso absoluto con la justicia y la tranquilidad de su familia y patrimonio.
+              Asesoramiento legal con más de 20 años de trayectoria. Fusionamos el rigor del derecho con la precisión de la ingeniería para brindar un enfoque integral que va mucho más allá de simplemente entender las leyes.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
@@ -166,11 +169,11 @@ export default function Home() {
             </h2>
 
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              El <strong>Estudio Jurídico Martin Barbaricca & Asociados</strong> se erige sobre pilares de seriedad, discreción y eficacia en la ciudad de Mar del Plata. Entendemos que enfrentar un proceso judicial o legal puede ser complejo y estresante; por ello, brindamos un acompañamiento cercano y transparente desde la primera consulta.
+              El <strong>Estudio Jurídico Martin Barbaricca & Asociados</strong> se destaca por un enfoque innovador y altamente especializado en Mar del Plata. Su fundador, el <strong>Dr. Martín Barbaricca</strong>, une más de 20 años de trayectoria en el ejercicio del derecho con su formación activa en <strong>Ingeniería en Software</strong>. Esta formación dual le permite abordar casos complejos con un método lógico, analítico y técnico que trasciende la interpretación tradicional de las leyes.
             </p>
 
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Nuestra especialización se centra principalmente en el <strong>Derecho de Familia</strong> y <strong>Sucesiones</strong>, áreas donde no solo se requiere rigor técnico de excelencia, sino también una profunda comprensión humana y confidencialidad para guiar a nuestros clientes hacia soluciones equitativas y duraderas.
+              Nuestras áreas principales se centran en el <strong>Derecho de Familia</strong>, <strong>Sucesiones</strong> y <strong>Derecho Informático</strong>, espacios donde el rigor de la ingeniería y la precisión del derecho se fusionan para blindar tanto sus activos tangibles como sus desarrollos tecnológicos e intangibles.
             </p>
 
             <div className="pt-2">
@@ -244,7 +247,7 @@ export default function Home() {
       <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
           
-          <div className="lg:col-span-7 space-y-6 order-2 lg:order-1">
+          <div className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-3">
               <span className="text-xs uppercase tracking-widest text-gold-600 font-bold">
                 Servicios y Compromiso
@@ -339,7 +342,7 @@ export default function Home() {
           </div>
 
           {/* Card Presentation - Services listing */}
-          <div className="lg:col-span-5 flex justify-center order-1 lg:order-2 w-full">
+          <div className="lg:col-span-5 flex justify-center w-full">
             <PhysicalCard variant="services" />
           </div>
 
@@ -367,18 +370,18 @@ export default function Home() {
               <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="p-5 bg-white border border-slate-200 rounded-sm">
                   <h4 className="font-serif text-slate-800 font-bold text-sm mb-1.5 flex items-center gap-2">
-                    <span className="text-gold-600">⚜</span> Enfoque Humano y Dedicado
+                    <span className="text-gold-600">⚜</span> Enfoque Híbrido Avanzado
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    A diferencia de la frialdad corporativa, entendemos el valor emocional detrás de cada conflicto familiar o sucesorio, brindando contención real y asesoramiento comprensivo.
+                    Nuestra doble formación en Ingeniería de Software y Derecho nos permite analizar los problemas con un rigor lógico y técnico superior, ofreciendo diagnósticos que van más allá del conocimiento legal tradicional.
                   </p>
                 </div>
                 <div className="p-5 bg-white border border-slate-200 rounded-sm">
                   <h4 className="font-serif text-slate-800 font-bold text-sm mb-1.5 flex items-center gap-2">
-                    <span className="text-gold-600">⚜</span> Visión Ágil y Resolutiva
+                    <span className="text-gold-600">⚜</span> Rigor Analítico y Humano
                   </h4>
                   <p className="text-xs text-slate-500 leading-relaxed">
-                    Priorizamos soluciones consensuadas para reducir tiempos y costos emocionales, actuando con máxima firmeza en tribunales cuando los acuerdos extrajudiciales no son viables.
+                    Aplicamos metodologías de ingeniería y procesos estructurados en derecho de familia, sucesiones y contratos para lograr soluciones claras, óptimas y ágiles con empatía.
                   </p>
                 </div>
               </div>
