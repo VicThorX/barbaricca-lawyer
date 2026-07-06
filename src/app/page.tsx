@@ -1,4 +1,4 @@
-import Image from "next/image";
+import PhysicalCard from "@/components/PhysicalCard";
 import { MapPin, Phone, MessageSquare } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import DecorativeFrame from "@/components/DecorativeFrame";
@@ -84,7 +84,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fdfdfa] text-slate-900 flex flex-col relative overflow-hidden" id="inicio">
+    <div className="min-h-screen bg-[#fdfdfa] text-slate-900 flex flex-col relative" id="inicio">
       
       {/* Background radial glow */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-gold-400/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -145,26 +145,12 @@ export default function Home() {
       </section>
 
       {/* About Section & Presentation Image 1 */}
-      <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full z-10" id="sobre-mi">
+      <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full z-10 scroll-mt-24" id="sobre-mi">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
           
-          {/* Card Presentation image from prompt */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative p-2.5 bg-white border border-slate-200 shadow-xl rounded-sm max-w-[340px] md:max-w-[380px] w-full overflow-hidden group">
-              <div className="absolute inset-0 bg-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
-              
-              {/* Outer gold line border inside the card block */}
-              <div className="relative border border-gold-500/10 p-2">
-                <Image
-                  src="/images/presentacion-familia.png"
-                  alt="Dr. Martin Barbaricca & Asociados - Derecho de Familia"
-                  width={360}
-                  height={500}
-                  className="w-full h-auto object-cover rounded-sm border border-gold-500/20 filter brightness-95 group-hover:brightness-100 transition-all duration-500"
-                  priority
-                />
-              </div>
-            </div>
+          {/* Card Presentation from prompt */}
+          <div className="lg:col-span-5 flex justify-center w-full">
+            <PhysicalCard variant="family" />
           </div>
 
           <div className="lg:col-span-7 space-y-6">
@@ -206,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* Practice Areas Grid */}
-      <section className="py-16 md:py-24 bg-slate-50/50 border-y border-slate-200/60 px-4 sm:px-6 md:px-12 z-10" id="especialidades">
+      <section className="py-16 md:py-24 bg-slate-50/50 border-y border-slate-200/60 px-4 sm:px-6 md:px-12 z-10 scroll-mt-24" id="especialidades">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <div className="flex justify-center text-gold-600 mb-2 font-serif text-xl">⚜</div>
@@ -285,28 +271,16 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* Card Presentation image from prompt - Services listing */}
-          <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
-            <div className="relative p-2.5 bg-white border border-slate-200 shadow-xl rounded-sm max-w-[340px] md:max-w-[380px] w-full overflow-hidden group">
-              <div className="absolute inset-0 bg-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
-              
-              <div className="relative border border-gold-500/10 p-2">
-                <Image
-                  src="/images/presentacion-servicios.png"
-                  alt="Servicios Legales - Sucesiones, Desalojos, Alimentos"
-                  width={360}
-                  height={500}
-                  className="w-full h-auto object-cover rounded-sm border border-gold-500/20 filter brightness-95 group-hover:brightness-100 transition-all duration-500"
-                />
-              </div>
-            </div>
+          {/* Card Presentation - Services listing */}
+          <div className="lg:col-span-5 flex justify-center order-1 lg:order-2 w-full">
+            <PhysicalCard variant="services" />
           </div>
 
         </div>
       </section>
 
       {/* Map, Location and Form Section */}
-      <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-200/80 px-4 sm:px-6 md:px-12 z-10" id="contacto">
+      <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-200/80 px-4 sm:px-6 md:px-12 z-10 scroll-mt-24" id="contacto">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16">
             
