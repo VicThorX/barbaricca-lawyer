@@ -110,7 +110,7 @@ export default function Home() {
             <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent my-5"></div>
 
             <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl leading-relaxed mb-8 font-light">
-              Asesoramiento legal integral, experiencia judicial y defensa de sus intereses en la ciudad de Mar del Plata. Compromiso absoluto con la justicia y la tranquilidad de su familia y patrimonio.
+              Asesoramiento legal integral con más de 20 años de trayectoria, experiencia judicial y defensa de sus intereses en la ciudad de Mar del Plata. Compromiso absoluto con la justicia y la tranquilidad de su familia y patrimonio.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
@@ -187,17 +187,23 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 pt-4">
               <div className="p-5 bg-white border border-slate-200 shadow-sm rounded-sm">
-                <h4 className="font-serif text-gold-600 font-bold text-base mb-1.5">⚖ Respaldo Local</h4>
+                <h4 className="font-serif text-gold-600 font-bold text-base mb-1.5">⚖ Trayectoria</h4>
                 <p className="text-xs text-slate-500 leading-relaxed">
-                  Operamos con amplio conocimiento de los tribunales de Mar del Plata y del Departamento Judicial de la Provincia de Buenos Aires.
+                  Más de 20 años de experiencia y ejercicio activo de la profesión con máxima dedicación y seriedad.
                 </p>
               </div>
               <div className="p-5 bg-white border border-slate-200 shadow-sm rounded-sm">
-                <h4 className="font-serif text-gold-600 font-bold text-base mb-1.5">⚜ Atención Inmediata</h4>
+                <h4 className="font-serif text-gold-600 font-bold text-base mb-1.5">🏛 Respaldo Local</h4>
                 <p className="text-xs text-slate-500 leading-relaxed">
-                  Canalizamos consultas urgentes a través de WhatsApp para agilizar el diagnóstico legal inicial de su caso.
+                  Operamos con amplio conocimiento de los tribunales de Mar del Plata y del Departamento Judicial provincial.
+                </p>
+              </div>
+              <div className="p-5 bg-white border border-slate-200 shadow-sm rounded-sm">
+                <h4 className="font-serif text-gold-600 font-bold text-base mb-1.5">⚜ Inmediatez</h4>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Canalizamos consultas urgentes por WhatsApp para agilizar el diagnóstico legal inicial de su situación.
                 </p>
               </div>
             </div>
