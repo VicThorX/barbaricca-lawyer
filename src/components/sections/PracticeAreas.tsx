@@ -1,0 +1,35 @@
+import React from "react";
+import PracticeAreaCard from "@/components/PracticeAreaCard";
+import { practiceAreas } from "@/config/specialties";
+
+export default function PracticeAreas() {
+  return (
+    <section className="py-16 md:py-24 bg-slate-50/50 border-y border-slate-200/60 px-4 sm:px-6 md:px-12 z-10 scroll-mt-24" id="especialidades">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+          <div className="flex justify-center text-gold-600 mb-2 font-serif text-xl">⚜</div>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-slate-900 mb-4">
+            Áreas de Especialización Jurídica
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+            Consulte nuestro abanico de servicios legales redactados y gestionados con la mayor solvencia técnica y práctica.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {practiceAreas.map((area, idx) => (
+            <div className="h-full" key={idx}>
+              <PracticeAreaCard
+                title={area.title}
+                description={area.description}
+                items={area.items}
+                iconName={area.iconName}
+                highlighted={area.highlighted}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
