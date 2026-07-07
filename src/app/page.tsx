@@ -9,11 +9,11 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#fdfdfa] text-slate-900 flex flex-col relative" id="inicio">
+    <div className="min-h-screen bg-[#fdfdfa] dark:bg-[#0a0d14] text-slate-900 dark:text-slate-100 flex flex-col relative transition-colors duration-300" id="inicio">
       
       {/* Background radial glow */}
-      <div className="absolute top-0 left-0 w-[50%] h-[20%] bg-gold-400/5 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 w-[50%] h-[20%] bg-gold-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-[50%] h-[20%] bg-gold-400/5 dark:bg-gold-500/8 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-[50%] h-[20%] bg-gold-500/5 dark:bg-gold-400/8 rounded-full blur-[120px] pointer-events-none"></div>
 
       <Navbar />
 

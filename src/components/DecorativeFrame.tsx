@@ -12,7 +12,7 @@ export default function DecorativeFrame({
   showEmblem = true,
 }: DecorativeFrameProps) {
   return (
-    <div className={`relative p-8 md:p-12 bg-white/80 backdrop-blur-md rounded-lg border border-gold-500/20 shadow-xl shadow-slate-200/40 gold-glow ${className}`}>
+    <div className={`relative p-8 md:p-12 bg-white/80 dark:bg-[#121723]/80 backdrop-blur-md rounded-lg border border-gold-500/20 dark:border-gold-400/10 shadow-xl shadow-slate-200/40 dark:shadow-none transition-colors duration-300 gold-glow ${className}`}>
       {/* Triple gold corner brackets (Top-Left) */}
       <div className="absolute top-3 left-3 w-10 h-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold-500/80 rounded-tl-sm"></div>
@@ -43,9 +43,9 @@ export default function DecorativeFrame({
 
       {/* Fleur-de-lis Emblem (⚜️) Top Center */}
       {showEmblem && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#fdfdfa] px-4 py-1 flex items-center justify-center">
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#fdfdfa] dark:bg-[#0a0d14] px-4 py-1 flex items-center justify-center transition-colors duration-300">
           <svg
-            className="w-8 h-8 text-gold-600 drop-shadow-[0_2px_4px_rgba(184,151,83,0.2)]"
+            className="w-8 h-8 text-gold-600 dark:text-gold-400 drop-shadow-[0_2px_4px_rgba(184,151,83,0.2)]"
             viewBox="0 0 24 24"
             fill="currentColor"
           >

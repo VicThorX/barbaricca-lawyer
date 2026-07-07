@@ -41,7 +41,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+          <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
             Nombre Completo *
           </label>
           <input
@@ -52,13 +52,13 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Ej. Juan Pérez"
-            className="w-full bg-white border border-slate-200 focus:border-gold-500 rounded-sm py-3 px-4 text-slate-900 text-sm outline-none transition-colors shadow-sm"
+            className="w-full bg-white dark:bg-[#0a0d14] border border-slate-200 dark:border-slate-800 focus:border-gold-500 dark:focus:border-gold-400 rounded-sm py-3 px-4 text-slate-900 dark:text-slate-100 text-sm outline-none transition-colors shadow-sm"
           />
         </div>
 
         {/* Phone */}
         <div>
-          <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+          <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
             Teléfono de Contacto *
           </label>
           <input
@@ -69,14 +69,14 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             placeholder="Ej. 223 1234567"
-            className="w-full bg-white border border-slate-200 focus:border-gold-500 rounded-sm py-3 px-4 text-slate-900 text-sm outline-none transition-colors shadow-sm"
+            className="w-full bg-white dark:bg-[#0a0d14] border border-slate-200 dark:border-slate-800 focus:border-gold-500 dark:focus:border-gold-400 rounded-sm py-3 px-4 text-slate-900 dark:text-slate-100 text-sm outline-none transition-colors shadow-sm"
           />
         </div>
       </div>
 
       {/* Legal Area Dropdown */}
       <div>
-        <label htmlFor="area" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+        <label htmlFor="area" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
           Área de Consulta *
         </label>
         <select
@@ -84,20 +84,20 @@ export default function ContactForm() {
           name="area"
           value={formData.area}
           onChange={handleChange}
-          className="w-full bg-white border border-slate-200 focus:border-gold-500 rounded-sm py-3 px-4 text-slate-900 text-sm outline-none transition-colors appearance-none cursor-pointer shadow-sm"
+          className="w-full bg-white dark:bg-[#0a0d14] border border-slate-200 dark:border-slate-800 focus:border-gold-500 dark:focus:border-gold-400 rounded-sm py-3 px-4 text-slate-900 dark:text-slate-100 text-sm outline-none transition-colors appearance-none cursor-pointer shadow-sm"
         >
-          <option value="Derecho de Familia">Derecho de Familia (Divorcios, Alimentos, Filiación)</option>
-          <option value="Sucesiones">Sucesiones (Testamentos, Declaratoria de Herederos)</option>
-          <option value="Derecho Inmobiliario / Alquileres">Derecho Inmobiliario (Desalojos, Contratos, Locación)</option>
-          <option value="Reclamos Civiles / Daños y Perjuicios">Reclamos Civiles (Daños y Perjuicios, Amparos)</option>
-          <option value="Denuncias Penales">Denuncias Penales</option>
-          <option value="Otro Asunto">Otro Asunto / Consulta General</option>
+          <option value="Derecho de Familia" className="dark:bg-[#121723]">Derecho de Familia (Divorcios, Alimentos, Filiación)</option>
+          <option value="Sucesiones" className="dark:bg-[#121723]">Sucesiones (Testamentos, Declaratoria de Herederos)</option>
+          <option value="Derecho Inmobiliario / Alquileres" className="dark:bg-[#121723]">Derecho Inmobiliario (Desalojos, Contratos, Locación)</option>
+          <option value="Reclamos Civiles / Daños y Perjuicios" className="dark:bg-[#121723]">Reclamos Civiles (Daños y Perjuicios, Amparos)</option>
+          <option value="Denuncias Penales" className="dark:bg-[#121723]">Denuncias Penales</option>
+          <option value="Otro Asunto" className="dark:bg-[#121723]">Otro Asunto / Consulta General</option>
         </select>
       </div>
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-2">
+        <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">
           Detalle de su consulta *
         </label>
         <textarea
@@ -108,7 +108,7 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Escriba aquí brevemente su situación para poder asesorarle adecuadamente..."
-          className="w-full bg-white border border-slate-200 focus:border-gold-500 rounded-sm py-3 px-4 text-slate-900 text-sm outline-none transition-colors resize-none shadow-sm"
+          className="w-full bg-white dark:bg-[#0a0d14] border border-slate-200 dark:border-slate-800 focus:border-gold-500 dark:focus:border-gold-400 rounded-sm py-3 px-4 text-slate-900 dark:text-slate-100 text-sm outline-none transition-colors resize-none shadow-sm"
         ></textarea>
       </div>
 
@@ -116,7 +116,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full flex items-center justify-center gap-2.5 py-4 bg-slate-900 hover:bg-slate-800 disabled:bg-slate-350 disabled:text-slate-500 text-white font-bold rounded-sm text-sm uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-md hover:shadow-slate-300/20"
+        className="w-full flex items-center justify-center gap-2.5 py-4 bg-slate-900 dark:bg-slate-850 hover:bg-slate-800 dark:hover:bg-slate-800 disabled:bg-slate-350 disabled:text-slate-500 text-white font-bold rounded-sm text-sm uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-md border border-slate-900 dark:border-slate-800"
       >
         {isSubmitting ? (
           <>
@@ -130,7 +130,7 @@ export default function ContactForm() {
         )}
       </button>
       
-      <p className="text-center text-[11px] text-slate-500 italic">
+      <p className="text-center text-[11px] text-slate-500 dark:text-slate-400 italic">
         * Al hacer clic se abrirá WhatsApp con el mensaje pre-armado para ser enviado de inmediato al Dr. Barbaricca.
       </p>
     </form>

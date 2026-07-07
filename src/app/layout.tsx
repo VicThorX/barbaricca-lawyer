@@ -50,7 +50,7 @@ export default function RootLayout({
       lang="es"
       className={`${cinzel.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#070a13] text-slate-100 font-sans">
+      <body className="min-h-full flex flex-col bg-[#fdfdfa] dark:bg-[#070a13] text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
         {children}
       </body>
     </html>
