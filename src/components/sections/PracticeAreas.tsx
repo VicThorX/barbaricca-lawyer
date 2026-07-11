@@ -9,10 +9,10 @@ export default function PracticeAreas() {
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <div className="flex justify-center text-gold-600 dark:text-gold-400 mb-2 font-serif text-xl">⚜</div>
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-slate-900 dark:text-slate-100 mb-4">
-            Áreas de Especialización Jurídica
+            Abogado en Mar del Plata: Especialidades del Estudio
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-            Consulte nuestro abanico de servicios legales redactados y gestionados con la mayor solvencia técnica y práctica.
+            Consulte nuestros servicios legales en Mar del Plata, Batán y toda la Provincia de Buenos Aires, gestionados con la mayor solvencia técnica y práctica.
           </p>
         </div>
 

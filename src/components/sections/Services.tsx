@@ -16,11 +16,11 @@ export default function Services() {
           </div>
 
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-slate-900 dark:text-slate-100 leading-tight">
-            Combinamos el Rigor Jurídico con la Sensibilidad Humana
+            Servicios Jurídicos en Mar del Plata: Rigor y Compromiso Profesional
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-light">
-            Brindamos soluciones integrales diseñadas para blindar su patrimonio, proteger los vínculos familiares y asegurar sus derechos civiles en cada etapa.
+            Ofrecemos soluciones integrales y patrocinio en todo el Partido de General Pueyrredón y la Provincia de Buenos Aires, diseñados para blindar su patrimonio, proteger los vínculos familiares y defender sus derechos.
           </p>
 
           {/* Adapted 6 Services Grid */}

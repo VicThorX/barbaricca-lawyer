@@ -35,15 +35,15 @@ export default function About() {
             </div>
 
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-slate-900 dark:text-slate-100 leading-tight">
-              Defensa Profesional y Asesoramiento con Sensibilidad Legal
+              Estudio Jurídico en Mar del Plata: Defensa y Soluciones Legales
             </h2>
 
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              El <strong>Estudio Jurídico Martin Barbaricca & Asociados</strong> se destaca por un enfoque innovador y altamente especializado en Mar del Plata. Su fundador, el <strong>Dr. Martín Barbaricca</strong>, une más de 20 años de trayectoria en el ejercicio del derecho con su formación activa en <strong>Ingeniería en Software</strong>. Esta formación dual le permite abordar casos complejos con un método lógico, analítico y técnico que trasciende la interpretación tradicional de las leyes.
+              El <strong>Estudio Jurídico Martin Barbaricca & Asociados</strong> se destaca por un enfoque innovador y altamente especializado en el Partido de General Pueyrredón. Su fundador, el <strong>Dr. Martín Barbaricca</strong>, une más de 20 años de trayectoria en el ejercicio de la abogacía con su formación activa en <strong>Ingeniería en Software</strong>. Esta formación dual única le permite abordar litigios complejos y consultas legales en toda la <strong>Provincia de Buenos Aires</strong> con una precisión lógica que trasciende la interpretación jurídica tradicional.
             </p>
 
             <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-              Nuestras áreas principales se centran en el <strong>Derecho de Familia</strong>, <strong>Sucesiones</strong> y <strong>Derecho Informático</strong>, espacios donde el rigor de la ingeniería y la precisión del derecho se fusionan para blindar tanto sus activos tangibles como sus desarrollos tecnológicos e intangibles.
+              Nuestras áreas principales abarcan el <strong>Derecho de Familia</strong>, <strong>Sucesiones</strong> y <strong>Derecho Informático</strong>, estructurando soluciones adaptadas al Departamento Judicial de Mar del Plata para proteger tanto los lazos familiares como los activos digitales y patrimoniales.
             </p>
 
             <div className="pt-2">

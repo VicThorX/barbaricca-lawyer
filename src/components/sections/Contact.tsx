@@ -19,11 +19,11 @@ export default function Contact() {
               </div>
 
               <h2 className="font-serif text-2xl sm:text-3xl font-bold tracking-wide text-slate-900 dark:text-slate-100 mb-4">
-                Comience su Consulta Hoy Mismo
+                Contacto con nuestro Abogado en Mar del Plata
               </h2>
 
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Puede enviarnos un mensaje con los detalles de su consulta utilizando el formulario, o bien comunicarse directamente por llamada o WhatsApp para coordinar una reunión presencial u online.
+                Envíenos los detalles de su consulta legal mediante el formulario, o bien comuníquese directamente por WhatsApp para coordinar una reunión presencial en Mar del Plata y Batán, o una videollamada desde cualquier punto de la Provincia de Buenos Aires.
               </p>
             </div>
 
@@ -67,7 +67,7 @@ export default function Contact() {
                   <p className="text-sm text-slate-800 dark:text-slate-200 font-semibold mt-0.5">
                     Consultas Virtuales y Presenciales
                   </p>
-                  <span className="text-[11px] text-slate-500 dark:text-slate-400">Coordinación de entrevistas presenciales en Mar del Plata u online (Zoom/Meet)</span>
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400">Coordinación de entrevistas presenciales en Mar del Plata, Batán y asesoramiento virtual (Zoom/Meet) para toda la Provincia.</span>
                 </div>
               </div>
             </div>

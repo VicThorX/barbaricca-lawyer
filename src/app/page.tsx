@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import PracticeAreas from "@/components/sections/PracticeAreas";
 import Services from "@/components/sections/Services";
+import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
@@ -17,15 +18,19 @@ export default function Home() {
 
       <Navbar />
 
-      <Hero />
+      <main className="flex-grow flex flex-col">
+        <Hero />
 
-      <About />
+        <About />
 
-      <PracticeAreas />
+        <PracticeAreas />
 
-      <Services />
+        <Services />
 
-      <Contact />
+        <FAQ />
+
+        <Contact />
+      </main>
 
       <Footer />
 

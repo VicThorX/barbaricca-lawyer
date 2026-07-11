@@ -23,6 +23,7 @@ export default function Navbar() {
     { name: "Inicio", href: "#inicio" },
     { name: "Sobre Mí", href: "#sobre-mi" },
     { name: "Especialidades", href: "#especialidades" },
+    { name: "FAQs", href: "#preguntas-frecuentes" },
     { name: "Contacto", href: "#contacto" },
   ];
 

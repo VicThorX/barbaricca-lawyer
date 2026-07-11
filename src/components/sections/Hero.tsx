@@ -7,7 +7,7 @@ export default function Hero() {
       <DecorativeFrame showEmblem={true} className="max-w-4xl w-full">
         <div className="flex flex-col items-center py-4 md:py-6">
           <span className="text-xs uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400 font-bold mb-3">
-            Estudio Jurídico & Ingeniería en Software
+            Abogado en Mar del Plata • General Pueyrredón
           </span>
           
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-wider text-slate-900 dark:text-slate-100 leading-tight mb-4">
@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent my-5"></div>
 
           <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-8 font-light">
-            Asesoramiento legal con más de 20 años de trayectoria. Fusionamos el rigor del derecho con la precisión de la ingeniería para brindar un enfoque integral que va mucho más allá de simplemente entender las leyes.
+            Estudio Jurídico con más de 20 años de trayectoria profesional. Brindamos asesoramiento legal personalizado en Mar del Plata, Batán y toda la Provincia de Buenos Aires, fusionando el rigor de la ley con la precisión analítica de la ingeniería.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
