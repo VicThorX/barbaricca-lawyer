@@ -188,66 +188,76 @@ export default async function SpecialtyPage({ params }: PageProps) {
       <Navbar />
 
       <main className="flex-grow flex flex-col">
-        {/* Top Sub-Navigation Bar: Back button, Breadcrumbs & Specialty Switcher */}
-        <div className="pt-24 md:pt-28 bg-slate-100/80 dark:bg-[#0d121f] border-b border-slate-200/80 dark:border-slate-800/80">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-4">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              {/* Back link + Breadcrumb */}
-              <div className="flex items-center gap-3 flex-wrap">
+        {/* Top Sub-Navigation Bar: Breadcrumbs & Luxury Specialty Selector */}
+        <div className="pt-24 md:pt-28 bg-slate-100/70 dark:bg-[#0d121f]/90 border-b border-slate-200/80 dark:border-slate-800/80">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-4 space-y-4">
+            {/* Row 1: Breadcrumb + Back Link */}
+            <div className="flex items-center justify-between gap-4 flex-wrap">
+              <nav
+                aria-label="Ruta de navegación"
+                className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400"
+              >
+                <Link
+                  href="/"
+                  className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
+                >
+                  Inicio
+                </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
                 <Link
                   href="/#especialidades"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold-600 dark:text-gold-400 hover:text-gold-700 dark:hover:text-gold-300 bg-white dark:bg-[#121723] border border-gold-500/30 dark:border-gold-400/30 px-3 py-1.5 rounded-sm shadow-2xs transition-all"
+                  className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
                 >
-                  <ArrowLeft className="w-3.5 h-3.5" />
-                  <span>Volver al Inicio</span>
+                  Especialidades
                 </Link>
+                <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                <span className="text-gold-600 dark:text-gold-400 font-semibold">
+                  {area.title}
+                </span>
+              </nav>
 
-                <nav
-                  aria-label="Ruta de navegación"
-                  className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400"
-                >
-                  <Link
-                    href="/"
-                    className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
-                  >
-                    Inicio
-                  </Link>
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-                  <Link
-                    href="/#especialidades"
-                    className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
-                  >
-                    Especialidades
-                  </Link>
-                  <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-                  <span className="text-slate-900 dark:text-slate-200 font-semibold">
-                    {area.shortTitle}
-                  </span>
-                </nav>
-              </div>
-
-              {/* Specialty Switcher Pills */}
-              <div
-                aria-label="Cambiar de especialidad"
-                className="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0 no-scrollbar"
+              <Link
+                href="/#especialidades"
+                className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-600 dark:text-slate-300 hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
               >
-                {practiceAreas.map((item) => {
-                  const isActive = item.slug === area.slug;
-                  return (
-                    <Link
-                      key={item.slug}
-                      href={`/especialidades/${item.slug}`}
-                      className={`text-[11px] whitespace-nowrap px-3 py-1.5 rounded-sm font-semibold transition-all ${
+                <ArrowLeft className="w-3.5 h-3.5 text-gold-600 dark:text-gold-400" />
+                <span>Volver al listado general</span>
+              </Link>
+            </div>
+
+            {/* Row 2: 6-Specialty Segmented Selector (No Scrollbars) */}
+            <div
+              aria-label="Seleccionar especialidad jurídica"
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 pt-1"
+            >
+              {practiceAreas.map((item) => {
+                const isActive = item.slug === area.slug;
+                const TabIcon = iconMap[item.iconName] || Scale;
+                return (
+                  <Link
+                    key={item.slug}
+                    href={`/especialidades/${item.slug}`}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`group relative flex items-center justify-center gap-2 px-3 py-2.5 rounded-sm text-[11px] uppercase tracking-wider transition-all duration-300 text-center ${
+                      isActive
+                        ? "bg-white dark:bg-[#161d2d] text-gold-600 dark:text-gold-400 font-bold border border-gold-500/50 dark:border-gold-400/50 shadow-sm"
+                        : "bg-white/50 dark:bg-[#101522]/70 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-white dark:hover:bg-[#141b2b] border border-slate-200/70 dark:border-slate-800/80 font-medium"
+                    }`}
+                  >
+                    {isActive && (
+                      <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-transparent via-gold-500 to-transparent"></span>
+                    )}
+                    <TabIcon
+                      className={`w-3.5 h-3.5 flex-shrink-0 transition-colors ${
                         isActive
-                          ? "bg-gold-500 text-slate-950 shadow-xs"
-                          : "bg-white/70 dark:bg-slate-900/70 text-slate-600 dark:text-slate-400 hover:text-gold-600 dark:hover:text-gold-400 border border-slate-200/70 dark:border-slate-800"
+                          ? "text-gold-600 dark:text-gold-400"
+                          : "text-slate-400 dark:text-slate-500 group-hover:text-gold-500"
                       }`}
-                    >
-                      {item.shortTitle}
-                    </Link>
-                  );
-                })}
-              </div>
+                    />
+                    <span className="truncate">{item.shortTitle}</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>

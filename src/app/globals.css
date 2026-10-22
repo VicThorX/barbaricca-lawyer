@@ -70,6 +70,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Hide native scrollbars where needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Custom Gold Text & Gradients optimized for light backgrounds */
 .text-gold-gradient {
   background: linear-gradient(135deg, #8c6e35 0%, #b89753 50%, #513e1d 100%);
