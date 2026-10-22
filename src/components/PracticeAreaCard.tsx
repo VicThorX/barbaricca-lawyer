@@ -1,26 +1,51 @@
 import React from "react";
-import * as Icons from "lucide-react";
+import Link from "next/link";
+import {
+  Heart,
+  Code,
+  FileText,
+  Home as HomeIcon,
+  Shield,
+  BookOpen,
+  Scale,
+  ArrowRight,
+} from "lucide-react";
+import type { SpecialtyIconName } from "@/config/specialties";
 
 interface PracticeAreaCardProps {
+  slug: string;
   title: string;
   description: string;
   items: string[];
-  iconName: keyof typeof Icons;
+  iconName: SpecialtyIconName;
   highlighted?: boolean;
 }
 
+const iconMap: Record<
+  SpecialtyIconName,
+  React.ComponentType<{ className?: string }>
+> = {
+  Heart,
+  Code,
+  FileText,
+  HomeIcon,
+  Shield,
+  BookOpen,
+};
+
 export default function PracticeAreaCard({
+  slug,
   title,
   description,
   items,
   iconName,
   highlighted = false,
 }: PracticeAreaCardProps) {
-  // Dynamically resolve icon from lucide-react
-  const IconComponent = (Icons[iconName] as React.ComponentType<{ className?: string }>) || Icons.Scale;
+  const IconComponent = iconMap[iconName] || Scale;
+  const href = `/especialidades/${slug}`;
 
   return (
-    <div
+    <article
       className={`group relative p-8 rounded-md transition-all duration-500 flex flex-col justify-between h-full ${
         highlighted
           ? "bg-amber-50/40 dark:bg-[#161d2d] border border-gold-500/30 dark:border-gold-400/40 gold-glow"
@@ -35,22 +60,32 @@ export default function PracticeAreaCard({
         <div className="flex items-start justify-between mb-6">
           <div
             className={`p-3 rounded-sm ${
-              highlighted ? "bg-gold-500/10 text-gold-600 dark:text-gold-400" : "bg-slate-100 dark:bg-slate-800 text-gold-600 dark:text-gold-400 group-hover:bg-gold-500/5 dark:group-hover:bg-gold-400/5 transition-all"
+              highlighted
+                ? "bg-gold-500/10 text-gold-600 dark:text-gold-400"
+                : "bg-slate-100 dark:bg-slate-800 text-gold-600 dark:text-gold-400 group-hover:bg-gold-500/5 dark:group-hover:bg-gold-400/5 transition-all"
             } transition-colors`}
           >
             <IconComponent className="w-8 h-8" />
           </div>
-          
-          {/* Subtle gold ornamentation in the card corner */}
-          <span className="text-slate-300 dark:text-slate-700 group-hover:text-gold-500/20 transition-colors font-serif select-none text-2xl font-bold">
-            ⚜
-          </span>
+
+          <div className="flex items-center gap-2">
+            {highlighted && (
+              <span className="text-[10px] uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold bg-gold-500/10 dark:bg-gold-400/10 px-2.5 py-1 rounded-xs">
+                Enfoque Principal
+              </span>
+            )}
+            <span className="text-slate-300 dark:text-slate-700 group-hover:text-gold-500/20 transition-colors font-serif select-none text-2xl font-bold">
+              ⚜
+            </span>
+          </div>
         </div>
 
         <h3 className="font-serif text-xl font-semibold text-slate-900 dark:text-slate-100 mb-3 tracking-wide group-hover:text-gold-700 dark:group-hover:text-gold-400 transition-colors">
-          {title}
+          <Link href={href} className="focus:outline-none">
+            {title}
+          </Link>
         </h3>
-        
+
         <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
           {description}
         </p>
@@ -58,21 +93,28 @@ export default function PracticeAreaCard({
         {/* Services List */}
         <ul className="space-y-2.5">
           {items.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300">
-              <span className="text-gold-600 dark:text-gold-400 mt-1 select-none text-xs">⚜</span>
+            <li
+              key={idx}
+              className="flex items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300"
+            >
+              <span className="text-gold-600 dark:text-gold-400 mt-1 select-none text-xs">
+                ⚜
+              </span>
               <span className="leading-snug">{item}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      {highlighted && (
-        <div className="mt-8 pt-4 border-t border-slate-200 dark:border-slate-850">
-          <span className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">
-            Área de Enfoque Principal
-          </span>
-        </div>
-      )}
-    </div>
+      <div className="mt-8 pt-4 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between">
+        <Link
+          href={href}
+          className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-gold-600 dark:text-gold-400 hover:text-gold-700 dark:hover:text-gold-300 font-bold group/link transition-colors"
+        >
+          <span>Requisitos y preguntas frecuentes</span>
+          <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
+        </Link>
+      </div>
+    </article>
   );
 }
