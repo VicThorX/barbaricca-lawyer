@@ -121,6 +121,7 @@ export default function RootLayout({
         priceRange: "$$",
         taxID: "20-28639843-0",
         foundingDate: "2007-10-25",
+        hasMap: "https://maps.app.goo.gl/tjyAuKWqnY3DRuzS6",
         address: {
           "@type": "PostalAddress",
           addressLocality: "Mar del Plata",
@@ -184,6 +185,7 @@ export default function RootLayout({
           ],
           sameAs: [
             "https://matricula.colproba.org.ar/index.php/consulta/visualizar/30664",
+            "https://maps.app.goo.gl/tjyAuKWqnY3DRuzS6",
           ],
         },
         hasOfferCatalog: {
@@ -213,6 +215,7 @@ export default function RootLayout({
         },
         sameAs: [
           "https://matricula.colproba.org.ar/index.php/consulta/visualizar/30664",
+          "https://maps.app.goo.gl/tjyAuKWqnY3DRuzS6",
         ],
       },
       {

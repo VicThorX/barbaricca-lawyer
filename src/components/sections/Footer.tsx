@@ -40,6 +40,15 @@ export default function Footer() {
               >
                 Legajo COLPROBA #30664
               </a>
+              <span>•</span>
+              <a
+                href="https://maps.app.goo.gl/tjyAuKWqnY3DRuzS6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold-400 hover:underline"
+              >
+                Perfil en Google Maps
+              </a>
             </div>
           </div>
 
