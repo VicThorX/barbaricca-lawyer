@@ -1,12 +1,22 @@
 import React from "react";
-import { FileCheck, Heart, Scale, FileSignature, ShieldAlert, Gavel } from "lucide-react";
+import Link from "next/link";
+import {
+  FileCheck,
+  Heart,
+  Scale,
+  FileSignature,
+  ShieldAlert,
+  Gavel,
+} from "lucide-react";
 import PhysicalCard from "@/components/PhysicalCard";
 
 export default function Services() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full z-10">
+    <section
+      className="py-16 md:py-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full z-10"
+      aria-labelledby="heading-servicios"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
-        
         <div className="lg:col-span-7 space-y-6">
           <div className="flex items-center gap-3">
             <span className="text-xs uppercase tracking-widest text-gold-600 dark:text-gold-400 font-bold">
@@ -15,26 +25,32 @@ export default function Services() {
             <div className="h-[1px] w-12 bg-gold-500/50 dark:bg-gold-400/30"></div>
           </div>
 
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-slate-900 dark:text-slate-100 leading-tight">
+          <h2
+            id="heading-servicios"
+            className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide text-slate-900 dark:text-slate-100 leading-tight"
+          >
             Servicios Jurídicos en Mar del Plata: Rigor y Compromiso Profesional
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed font-light">
-            Ofrecemos soluciones integrales y patrocinio en todo el Partido de General Pueyrredón y la Provincia de Buenos Aires, diseñados para blindar su patrimonio, proteger los vínculos familiares y defender sus derechos.
+            Ofrecemos soluciones integrales y patrocinio letrado en todo el Partido de General Pueyrredón (Mar del Plata y Batán) y la Provincia de Buenos Aires, diseñados para blindar su patrimonio, proteger los vínculos familiares y defender sus derechos.
           </p>
 
           {/* Adapted 6 Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-            
             <div className="space-y-1 group">
               <div className="flex items-center gap-2">
                 <div className="p-1.5 bg-gold-500/10 dark:bg-gold-400/10 text-gold-600 dark:text-gold-400 rounded-xs group-hover:scale-110 transition-transform">
                   <FileCheck className="w-4 h-4" />
                 </div>
-                <h4 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm">Contratos y Patrimonio</h4>
+                <h3 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                  <Link href="/especialidades/derecho-inmobiliario-desalojos-alquileres">
+                    Contratos y Patrimonio
+                  </Link>
+                </h3>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pl-8">
-                Redacción experta de contratos de locación, boletos de compraventa y testamentos para asegurar blindaje patrimonial.
+                Redacción experta de contratos de locación, boletos de compraventa, contratos SaaS y testamentos para asegurar blindaje patrimonial.
               </p>
             </div>
 
@@ -43,10 +59,14 @@ export default function Services() {
                 <div className="p-1.5 bg-gold-500/10 dark:bg-gold-400/10 text-gold-600 dark:text-gold-400 rounded-xs group-hover:scale-110 transition-transform">
                   <Heart className="w-4 h-4" />
                 </div>
-                <h4 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm">Derecho de Familia</h4>
+                <h3 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                  <Link href="/especialidades/derecho-de-familia-mar-del-plata">
+                    Derecho de Familia
+                  </Link>
+                </h3>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pl-8">
-                Representación dedicada en divorcios, reclamos de alimentos, régimen de comunicación y cuidado personal con estricta reserva.
+                Representación dedicada en divorcios exprés, reclamos de alimentos, régimen de comunicación y cuidado personal con estricta reserva.
               </p>
             </div>
 
@@ -55,10 +75,14 @@ export default function Services() {
                 <div className="p-1.5 bg-gold-500/10 dark:bg-gold-400/10 text-gold-600 dark:text-gold-400 rounded-xs group-hover:scale-110 transition-transform">
                   <Scale className="w-4 h-4" />
                 </div>
-                <h4 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm">Sucesiones y Herencias</h4>
+                <h3 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                  <Link href="/especialidades/sucesiones-y-herencias-mar-del-plata">
+                    Sucesiones y Herencias
+                  </Link>
+                </h3>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pl-8">
-                Tramitación rápida de Sucesiones ab-intestato y testamentarias, facilitando la liquidación y adjudicación de bienes.
+                Tramitación ágil de sucesiones ab-intestato y testamentarias, declaratoria de herederos e inscripción por tracto abreviado.
               </p>
             </div>
 
@@ -67,10 +91,14 @@ export default function Services() {
                 <div className="p-1.5 bg-gold-500/10 dark:bg-gold-400/10 text-gold-600 dark:text-gold-400 rounded-xs group-hover:scale-110 transition-transform">
                   <FileSignature className="w-4 h-4" />
                 </div>
-                <h4 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm">Mediaciones y Acuerdos</h4>
+                <h3 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                  <Link href="/especialidades/derecho-informatico-propiedad-intelectual">
+                    Derecho Informático y Marcas
+                  </Link>
+                </h3>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pl-8">
-                Convenios de cesión de derechos y liquidaciones conyugales para resolver controversias sin recurrir a la vía judicial.
+                Registro de marcas en INPI, depósito de software en DNDA, contratos tecnológicos y protección de propiedad intelectual.
               </p>
             </div>
 
@@ -79,10 +107,14 @@ export default function Services() {
                 <div className="p-1.5 bg-gold-500/10 dark:bg-gold-400/10 text-gold-600 dark:text-gold-400 rounded-xs group-hover:scale-110 transition-transform">
                   <ShieldAlert className="w-4 h-4" />
                 </div>
-                <h4 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm">Amparos de Urgencia</h4>
+                <h3 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                  <Link href="/especialidades/amparos-danos-y-perjuicios-mar-del-plata">
+                    Amparos de Urgencia
+                  </Link>
+                </h3>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pl-8">
-                Interposición inmediata de recursos de amparo por salud o vivienda y solicitud de medidas cautelares efectivas.
+                Interposición inmediata de recursos de amparo de salud contra obras sociales y prepagas con medidas cautelares efectivas.
               </p>
             </div>
 
@@ -91,13 +123,16 @@ export default function Services() {
                 <div className="p-1.5 bg-gold-500/10 dark:bg-gold-400/10 text-gold-600 dark:text-gold-400 rounded-xs group-hover:scale-110 transition-transform">
                   <Gavel className="w-4 h-4" />
                 </div>
-                <h4 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm">Defensa y Litigios</h4>
+                <h3 className="font-serif font-bold text-slate-800 dark:text-slate-200 text-sm group-hover:text-gold-600 dark:group-hover:text-gold-400 transition-colors">
+                  <Link href="/especialidades/derecho-inmobiliario-desalojos-alquileres">
+                    Desalojos y Litigios Civiles
+                  </Link>
+                </h3>
               </div>
               <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pl-8">
-                Patrocinio en juicios de desalojo, cobro de pesos y defensa técnica y firme de sus intereses en tribunales civiles.
+                Patrocinio en juicios de desalojo, ejecución de alquileres, cobro de pesos y reclamos por daños y perjuicios.
               </p>
             </div>
-
           </div>
         </div>
 
@@ -109,7 +144,6 @@ export default function Services() {
         {/* Why choose us & CTA footer spanning full width */}
         <div className="lg:col-span-12 border-t border-slate-200/80 dark:border-slate-800/80 pt-12 md:pt-16 mt-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
             {/* Why choose us left: title */}
             <div className="lg:col-span-4">
               <div className="flex items-center gap-3 mb-3">
@@ -119,10 +153,10 @@ export default function Services() {
                 <div className="h-[1px] w-8 bg-gold-500/50 dark:bg-gold-400/30"></div>
               </div>
               <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                ¿Por qué elegir nuestro Estudio?
+                ¿Por qué elegir nuestro Estudio Jurídico en Mar del Plata?
               </h3>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">
-                Combinamos el rigor de la ley con un trato cercano y empático para resolver su situación con el menor desgaste posible.
+                Combinamos el rigor procesal de la ley con un trato cercano y empático para resolver su situación con el menor desgaste posible.
               </p>
             </div>
 
@@ -130,22 +164,21 @@ export default function Services() {
             <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="p-5 bg-white dark:bg-[#121723] border border-slate-200 dark:border-slate-800 rounded-sm transition-colors duration-300">
                 <h4 className="font-serif text-slate-800 dark:text-slate-200 font-bold text-sm mb-1.5 flex items-center gap-2">
-                  <span className="text-gold-600 dark:text-gold-400">⚜</span> Enfoque Híbrido Avanzado
+                  <span className="text-gold-600 dark:text-gold-400">⚜</span> Enfoque Híbrido: Derecho + Ingeniería
                 </h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                  Nuestra doble formación en Ingeniería de Software y Derecho nos permite analizar los problemas con un rigor lógico y técnico superior, ofreciendo diagnósticos que van más allá del conocimiento legal tradicional.
+                  Nuestra doble formación en Ingeniería en Software y Derecho nos permite analizar litigios, contratos y evidencia digital con un rigor lógico y técnico superior.
                 </p>
               </div>
               <div className="p-5 bg-white dark:bg-[#121723] border border-slate-200 dark:border-slate-800 rounded-sm transition-colors duration-300">
-                <h4 className="font-serif text-slate-800 dark:text-slate-200 font-bold text-sm mb-1.5 flex items-center gap-2">
+                <h4 className="font-serif text-slate-800 dark:text-gold-400 font-bold text-sm mb-1.5 flex items-center gap-2">
                   <span className="text-gold-600 dark:text-gold-400">⚜</span> Rigor Analítico y Humano
                 </h4>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                  Aplicamos metodologías de ingeniería y procesos estructurados en derecho de familia, Sucesiones y contratos para lograr soluciones claras, óptimas y ágiles con empatía.
+                  Aplicamos procesos estructurados en Derecho de Familia, Sucesiones y Contratos para lograr resoluciones claras, ágiles y transparentes en cada etapa del expediente.
                 </p>
               </div>
             </div>
-
           </div>
 
           {/* Call to action button centered */}
@@ -161,14 +194,17 @@ export default function Services() {
                 stroke="currentColor"
                 strokeWidth="2.5"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
               </svg>
             </a>
           </div>
-
         </div>
-
       </div>
     </section>
   );

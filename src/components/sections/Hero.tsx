@@ -6,22 +6,33 @@ export default function Hero() {
     <header className="relative pt-28 pb-16 md:pt-40 md:pb-28 px-4 sm:px-6 md:px-12 flex flex-col items-center text-center max-w-7xl mx-auto w-full z-10">
       <DecorativeFrame showEmblem={true} className="max-w-4xl w-full">
         <div className="flex flex-col items-center py-4 md:py-6">
-          <span className="text-xs uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400 font-bold mb-3">
-            Abogado en Mar del Plata • General Pueyrredón
-          </span>
-          
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-wider text-slate-900 dark:text-slate-100 leading-tight mb-4">
-            MARTIN BARBARICCA
-            <span className="block text-gold-600 dark:text-gold-400 text-xl sm:text-3xl md:text-4xl mt-2 tracking-[0.2em] font-normal uppercase">
-              & Asociados
+          <h1 className="flex flex-col items-center">
+            <span className="text-xs uppercase tracking-[0.2em] text-gold-600 dark:text-gold-400 font-bold mb-3 font-sans">
+              Abogado en Mar del Plata • General Pueyrredón • Provincia de Buenos Aires
+            </span>
+
+            <span className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-wider text-slate-900 dark:text-slate-100 leading-tight">
+              MARTIN BARBARICCA
+            </span>
+
+            <span className="block font-serif text-gold-600 dark:text-gold-400 text-xl sm:text-3xl md:text-4xl mt-2 tracking-[0.2em] font-normal uppercase">
+              &amp; Asociados • Estudio Jurídico
             </span>
           </h1>
 
           <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-500 to-transparent my-5"></div>
 
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-8 font-light">
-            Estudio Jurídico con más de 20 años de trayectoria profesional. Brindamos asesoramiento legal personalizado en Mar del Plata, Batán y toda la Provincia de Buenos Aires, fusionando el rigor de la ley con la precisión analítica de la ingeniería.
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed mb-5 font-light">
+            Más de 20 años de trayectoria profesional. Asesoramiento y patrocinio letrado en <strong>Derecho de Familia, Divorcios, Sucesiones, Desalojos, Contratos y Derecho Informático</strong> en Mar del Plata, Batán y toda la Provincia de Buenos Aires, fusionando el rigor de la ley con la precisión analítica de la ingeniería.
           </p>
+
+          <div className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 bg-slate-100/80 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 px-4 py-1.5 rounded-full mb-8">
+            <span className="font-semibold text-slate-800 dark:text-slate-200">
+              Dr. Martín Luis Barbaricca
+            </span>
+            <span className="text-gold-600 dark:text-gold-400">•</span>
+            <span>Matrícula T° XII F° 197 CAMDP (COLPROBA)</span>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
             <a
